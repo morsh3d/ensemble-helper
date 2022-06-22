@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "version": "1.0",
+  "name": "Ensemble Helper",
+  "description": "Adds ensemble mode to Google meet for coding exercises",
+  "icons": { 
+    "16": "/images/icon16.png",
+    "48": "/images/icon48.png",
+    "128": "/images/icon128.png"
+  },
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "/images/icon128.png"
+  },
+  "permissions": [
+    "tabs"
+  ]
+}
