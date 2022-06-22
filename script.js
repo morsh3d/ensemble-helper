@@ -18,6 +18,10 @@ class PomodoroTimer {
         /**
          * @type {HTMLElement}
          */
+        this.clickBtn = document.querySelector('#click-btn');
+        /**
+         * @type {HTMLElement}
+         */
         this.timeDisplay = document.querySelector('#time-display');
         /**
          * @type {null | setInterval}
@@ -41,6 +45,10 @@ class PomodoroTimer {
          * @type {HTMLElement}
          */
         this.shortBreakBtn.addEventListener("click", function () {iself.startTimer(5)});
+        /**
+         * @type {HTMLElement}
+         */
+        this.clickBtn.addEventListener("click", function() { alert("Hello Ensembler!")});
     }
 
     /**

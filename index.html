@@ -5,14 +5,20 @@
         <link rel="stylesheet" href="style.css"></link>
     </head>
     <body>
+        <form action="/action_page.php">
+            <label for="person1">Person 1:</label><br>
+            <input type="text" id="person1" name="person1" value=""><br>
+            <input type="submit" value="Submit">
+          </form> 
         <div class="container">
             <div class="timer">
-                <p id="time-display">25:00</p>
+                <p id="time-display">10:00</p>
             </div>
             <div class="button-container">
                 <button id="ensemble-btn">ENSEMBLE</button>
                 <button id="long-break-btn">LONG BREAK</button>
                 <button id="short-break-btn">SHORT BREAK</button>
+                <button id="click-btn">CLICK</button>
             </div>
         </div>
         <script src="script.js"></script>
