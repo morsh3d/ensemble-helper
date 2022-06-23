@@ -1,13 +1,13 @@
 body {
     margin: 0;
-    padding: 10px;
+    padding: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    min-width: 400px;
-    background-color: #424242;
+    min-width: 700px;
+    background-image: url('https://www.madetech.com/wp-content/uploads/2021/09/Made-Tech-office-logo-copy-1024x465.jpg');
 }
 
 .timer p {
-    text-align: center;
+    text-align: left;
     font-size: 50px;
     color: #810202;
     text-shadow:
@@ -54,4 +54,13 @@ button:hover {
 
 #time-display {
     color: red;
+}
+
+label {
+    font-size: large;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    display: block;
+    padding: 10px;
+    margin: 3px;
 }
