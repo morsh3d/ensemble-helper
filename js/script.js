@@ -1,4 +1,4 @@
-class PomodoroTimer {
+class EnsembleTimer {
     /**
      * @constructor
      */
@@ -15,10 +15,6 @@ class PomodoroTimer {
          * @type {HTMLElement}
          */
         this.shortBreakBtn = document.querySelector('#short-break-btn');
-        /**
-         * @type {HTMLElement}
-         */
-        this.clickBtn = document.querySelector('#click-btn');
         /**
          * @type {HTMLElement}
          */
@@ -48,7 +44,7 @@ class PomodoroTimer {
         /**
          * @type {HTMLElement}
          */
-        this.clickBtn.addEventListener("click", function() { alert("Hello Ensembler!")});
+        this.ensembleBtn.addEventListener("click", function() { alert("Ensemble started!")});
     }
 
     /**
@@ -89,10 +85,19 @@ class PomodoroTimer {
 }
 
 /**
- * @type {PomodoroTimer}
+ * @type {EnsembleTimer}
  */
-let Timer = new PomodoroTimer();
+let Timer = new EnsembleTimer();
 Timer.setEventListeners();
+
+document.getElementById("add").onclick  = function() {
+    
+    var node = document.createElement("Li");
+    var text = document.getElementById("user_input").value; 
+    var textnode=document.createTextNode(text);
+    node.appendChild(textnode);
+    document.getElementById("list_item").appendChild(node);
+}
 
 
 
