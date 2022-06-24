@@ -32,10 +32,6 @@ class EnsembleTimer {
         /**
          * @type {HTMLElement}
          */
-        this.ensembleBtn.addEventListener("click", function () {iself.startTimer(10)});
-        /**
-         * @type {HTMLElement}
-         */
         this.longBreakBtn.addEventListener("click", function () {iself.startTimer(15)});
         /**
          * @type {HTMLElement}
@@ -44,7 +40,15 @@ class EnsembleTimer {
         /**
          * @type {HTMLElement}
          */
-        this.ensembleBtn.addEventListener("click", function() { alert("Ensemble started!")});
+        this.ensembleBtn.addEventListener("click", function() { 
+            var myList = document.getElementById("list_item").getElementsByTagName("li")
+            if (myList.length < 3) {
+                alert("Need more people!")
+            } else {
+                alert("Ensemble started!")
+                iself.startTimer(10)
+            }
+        });
     }
 
     /**
@@ -97,8 +101,8 @@ document.getElementById("add").onclick  = function() {
     var textnode=document.createTextNode(text);
     node.appendChild(textnode);
     document.getElementById("list_item").appendChild(node);
-}
 
+}
 
 
 
