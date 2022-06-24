@@ -17,6 +17,6 @@ Building an ***Ensemble Helper*** to be used in programming exercises.
 
 5.) The roles should be shown on the screen, each person should clearly know their role
 
-Used [this](https://github.com/yfm-po/PomodoroTimer-chromeExtension) repo as boilerplate.
+Used [this](https://github.com/yfm-po/PomodoroTimer-chromeExtension) repo as a starting point.
 
 WIP
