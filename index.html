@@ -5,11 +5,17 @@
         <link rel="stylesheet" href="style.css"></link>
     </head>
     <body>
-        <form action="/action_page.php">
+        <h3>List of Ensemble People</h3>
+        <input type='text' id='user_input' />
+        <input type="button" id="add" value="Add New">
+        <ol id="list_item">
+        </ol>
+        <script src="js/displayform.js"></script>
+        <!-- <form action="/action_page.php">
             <label for="person1">Person 1:</label><br>
             <input type="text" id="person1" name="person1" value=""><br>
             <input type="submit" value="Submit">
-          </form> 
+          </form>  -->
         <div class="container">
             <div class="timer">
                 <p id="time-display">10:00</p>
@@ -21,6 +27,6 @@
                 <button id="click-btn">CLICK</button>
             </div>
         </div>
-        <script src="script.js"></script>
+        <script src="js/script.js"></script>
     </body>
 </html>

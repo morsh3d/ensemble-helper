@@ -56,11 +56,17 @@ button:hover {
     color: red;
 }
 
-label {
+h3 {
     font-size: large;
     cursor: pointer;
     color: rgb(255, 255, 255);
     display: block;
     padding: 10px;
     margin: 3px;
+}
+
+#list_item {
+    font-size: medium;
+    color: rgb(21, 117, 112);
+    background-color: lightgrey;
 }
