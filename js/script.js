@@ -50,6 +50,7 @@ class EnsembleTimer {
                 console.log(myList);
                 const list = document.getElementById("list_item").getElementsByTagName("li");
                 // document.getElementById("people_role").innerText = list[0].innerText + " " + list[1].innerText + " " + list[2].innerText
+                document.getElementById("roles-title").innerText = "Roles"
                 document.getElementById("role1").innerText = list[0].innerText + " " + "is NAVIGATOR"
                 document.getElementById("role2").innerText = list[1].innerText + " " + "is TYPIST"
                 document.getElementById("role3").innerText = list[2].innerText + " " + "is CO-NAVIGATOR"
