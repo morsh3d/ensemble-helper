@@ -3,7 +3,7 @@ body {
     padding: 20px;
     font-family: Arial, Helvetica, sans-serif;
     min-width: 700px;
-    background-image: url('https://www.madetech.com/wp-content/uploads/2021/09/Made-Tech-office-logo-copy-1024x465.jpg');
+    background-image: url('https://cdn.pixabay.com/photo/2018/02/17/19/40/steam-3160715_1280.jpg');
 }
 
 .timer p {
@@ -66,7 +66,26 @@ h3 {
 }
 
 #list_item {
+    font-size: large;
+    color: rgb(0, 0, 0);
+    background-color: rgb(250, 235, 215, 0.8);
+    line-height: 1.8;
+}
+
+#role1 {
     font-size: medium;
-    color: rgb(21, 117, 112);
-    background-color: lightgrey;
+    color: rgb(100, 7, 7);
+    background-color: rgb(250, 235, 215, 0.8);
+}
+
+#role2 {
+    font-size: medium;
+    color: rgb(2, 87, 82);
+    background-color: rgb(250, 235, 215, 0.8);
+}
+
+#role3 {
+    font-size: medium;
+    color: rgb(121, 72, 12);
+    background-color: rgb(250, 235, 215, 0.8);
 }

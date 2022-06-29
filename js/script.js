@@ -43,10 +43,13 @@ class EnsembleTimer {
         this.ensembleBtn.addEventListener("click", function() { 
             var myList = document.getElementById("list_item").getElementsByTagName("li")
             if (myList.length < 3) {
-                alert("Need more people!")
+                alert("Need more people!\n Add more people to the list!");
             } else {
                 alert("Ensemble started!")
                 iself.startTimer(10)
+                document.getElementById("role1").innerText = "Person 1 is NAVIGATOR"
+                document.getElementById("role2").innerText = "Person 2 is TYPIST"
+                document.getElementById("role3").innerText = "Person 3 is CO-NAVIGATOR"
             }
         });
     }
