@@ -89,3 +89,9 @@ h3 {
     color: rgb(121, 72, 12);
     background-color: rgb(250, 235, 215, 0.8);
 }
+
+#people_role {
+    font-size: medium;
+    color: rgb(6, 6, 6);
+    background-color: rgb(250, 235, 215, 0.8);
+}

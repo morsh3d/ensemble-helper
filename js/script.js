@@ -43,13 +43,16 @@ class EnsembleTimer {
         this.ensembleBtn.addEventListener("click", function() { 
             var myList = document.getElementById("list_item").getElementsByTagName("li")
             if (myList.length < 3) {
-                alert("Need more people!\n Add more people to the list!");
+                alert("Need more people!\n Add at least 3 people to the list!");
             } else {
                 alert("Ensemble started!")
                 iself.startTimer(10)
-                document.getElementById("role1").innerText = "Person 1 is NAVIGATOR"
-                document.getElementById("role2").innerText = "Person 2 is TYPIST"
-                document.getElementById("role3").innerText = "Person 3 is CO-NAVIGATOR"
+                console.log(myList);
+                const list = document.getElementById("list_item").getElementsByTagName("li");
+                // document.getElementById("people_role").innerText = list[0].innerText + " " + list[1].innerText + " " + list[2].innerText
+                document.getElementById("role1").innerText = list[0].innerText + " " + "is NAVIGATOR"
+                document.getElementById("role2").innerText = list[1].innerText + " " + "is TYPIST"
+                document.getElementById("role3").innerText = list[2].innerText + " " + "is CO-NAVIGATOR"
             }
         });
     }
@@ -91,21 +94,22 @@ class EnsembleTimer {
     }
 }
 
+    document.getElementById("add").onclick  = function() {
+        
+        var node = document.createElement("Li");
+        var text = document.getElementById("user_input").value; 
+        var textnode=document.createTextNode(text);
+        node.appendChild(textnode);
+        document.getElementById("list_item").appendChild(node);
+
+    }
+
 /**
  * @type {EnsembleTimer}
  */
 let Timer = new EnsembleTimer();
 Timer.setEventListeners();
 
-document.getElementById("add").onclick  = function() {
-    
-    var node = document.createElement("Li");
-    var text = document.getElementById("user_input").value; 
-    var textnode=document.createTextNode(text);
-    node.appendChild(textnode);
-    document.getElementById("list_item").appendChild(node);
-
-}
 
 
 
