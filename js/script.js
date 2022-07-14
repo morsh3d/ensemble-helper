@@ -1,7 +1,10 @@
+// Constants
+const durationInMinutes = 10;
+
 // Local Storage functions
 
 function playSound() {
-  let audio = new Audio('sounds/grandfatherclock.mp3');
+  let audio = new Audio("sounds/grandfatherclock.mp3");
   audio.play();
 }
 
@@ -43,13 +46,25 @@ function padStartWithZero(value) {
 
   return valueString;
 }
+
+function onFinished() {
+  setStartTime(null);
+  playSound();
+  console.log("Ensemble is over!");
+  alert("Ensemble is over!");
+}
+
 function getDisplayTime() {
   const startTime = getStartTime();
   if (!startTime) {
-    return null;
+    return "00:00";
   }
 
-  const time = new Date(startTime.getTime() + 10 * 60000);
+  const time = new Date(startTime.getTime() + durationInMinutes * 60000);
+  if (new Date() > time) {
+    onFinished();
+    return "00:00";
+  }
   let msec = time - new Date();
   const hh = Math.floor(msec / 1000 / 60 / 60);
   msec -= hh * 1000 * 60 * 60;
@@ -101,11 +116,22 @@ function renderEnsembleList() {
   setText("role3", people[2] + " " + "is CO-NAVIGATOR");
 }
 
-document.getElementById("add").onclick = function () {
+function addPersonFromInput() {
   const name = document.getElementById("user_input").value;
   addPerson(name);
   renderPerson(name);
-};
+  document.getElementById("user_input").value = "";
+  document.getElementById("user_input").focus();
+}
+
+document.getElementById("add").onclick = addPersonFromInput;
+
+document.getElementById("add").addEventListener("keypress", (event) => {
+  console.log(event.key, event)
+  if (event.key === "Enter") {
+    addPersonFromInput();
+  }
+});
 
 document.querySelector("#ensemble-btn").addEventListener("click", function () {
   const startTime = getStartTime();
