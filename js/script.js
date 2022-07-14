@@ -1,5 +1,5 @@
 // Constants
-const durationInMinutes = 10;
+const durationInMinutes = 1;
 
 // Local Storage functions
 
@@ -50,7 +50,6 @@ function padStartWithZero(value) {
 function onFinished() {
   setStartTime(null);
   playSound();
-  console.log("Ensemble is over!");
   alert("Ensemble is over!");
 }
 
@@ -144,8 +143,8 @@ document.querySelector("#ensemble-btn").addEventListener("click", function () {
   if (people.length < 3) {
     alert("Need more people!\n Add at least 3 people to the list!");
   } else {
-    alert("Ensemble started!");
     playSound();
+    alert("Ensemble started!");
     setStartTime(new Date());
     renderEnsembleList();
   }
