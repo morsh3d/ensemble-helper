@@ -1,4 +1,10 @@
 // Local Storage functions
+
+function playSound() {
+  let audio = new Audio('sounds/grandfatherclock.mp3');
+  audio.play();
+}
+
 function getPeople() {
   return (
     localStorage
@@ -113,6 +119,7 @@ document.querySelector("#ensemble-btn").addEventListener("click", function () {
     alert("Need more people!\n Add at least 3 people to the list!");
   } else {
     alert("Ensemble started!");
+    playSound();
     setStartTime(new Date());
     renderEnsembleList();
   }
